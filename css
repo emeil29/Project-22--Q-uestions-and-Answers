@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Fredoka:wght@400;500;600&family=Quintessential&family=Roboto:ital,wght@1,300&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(201, 165, 235);
+}
+h1 {
+margin: 50px 0 30px;
+text-align: center;
+}
+.faq-container{
+max-width: 600px;
+margin: 0 auto;
+}
+.faq{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.faq.active{
+    background-color: white;
+
+}
+.faq.active::before,
+.faq.active::after
+{
+   content: '\f0e5';
+  color: rgb(127, 223, 164);
+  font-size: 4rem;
+   font-family: 'Font Awesome 5 Free';
+   opacity: 0.5;
+   position: absolute;
+   top: 20px;
+   bottom: 30px;
+   z-index: 0;
+}
+.faq.active::before {
+    color: blue;
+    top: 10px;
+    left: 20px;
+    opacity: 0.2;
+}
+.faq-title{
+    margin: 0 3px;
+}
+.faq-text{
+    margin: 20px 0 0;
+    display: none;
+}
+.faq.active .faq-text {
+    display: block ;
+}
+.faq-toggle {
+background-color: transparent;
+border: 0;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+padding: 0;
+position: absolute;
+top: 30px;
+right: 30px;
+height: 30px;
+width: 30px;
+}
+.faq-toggle .fa-times {
+    display: none;
+    color: rgb(114, 60, 60);
+}
+.faq.active .faq-toggle .fa-times {
+    display: block;
+}
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+.faq.active .faq-toggle{
+    background-color: rgb(231, 154, 206)
+;
+border-radius: 20px;
+}
